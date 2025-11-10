@@ -18,7 +18,7 @@ html {
 header {
     /* background-color: #fff;
     color: #000; */
-    color: #b1b1b1;
+    color: #000;
 }
 
 header>.collapsible-header {
@@ -45,7 +45,7 @@ header>.collapsible-header {
 }
 
 .header-links:hover {
-    color: #ffffff;
+    color: var(--primary-text-color);
     /* background-color: var(--header-link-hover); */
 }
 
@@ -54,10 +54,7 @@ header>.collapsible-header {
 }
 
 .gradient-text {
-    background: rgb(215, 215, 215);
-    background: linear-gradient(90deg, rgba(215, 215, 215, 1) 18%, rgba(136, 136, 136, 1) 71%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #000;
 }
 
 .hero-section {
@@ -165,12 +162,18 @@ header>.collapsible-header {
 }
 
 .footer-link {
-    color: #c7c6c6;
+    color: #000;
     transition: color 0.3s;
 }
 
 .footer-link:hover {
-    color: #fff;
+    color: #7e22ce85;
+}
+
+.footer {
+    background-color: #1d0032c9;
+    border-radius: 50px;
+    box-shadow: 2px 2px 10px 10px rgb(127, 127, 127);
 }
 
 

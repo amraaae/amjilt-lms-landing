@@ -20,11 +20,11 @@ function onHeaderClickOutside(e) {
 
 function toggleHeader() {
     if (isHeaderCollapsed) {
-        // collapseHeaderItems.classList.remove("max-md:tw-opacity-0")
-        collapseHeaderItems.classList.add("opacity-100",)
+        // collapseHeaderItems.classList.remove("max-md:opacity-0")
+        collapseHeaderItems.classList.add("opacity-100", )
         collapseHeaderItems.style.width = "60vw"
         collapseBtn.classList.remove("bi-list")
-        collapseBtn.classList.add("bi-x", "max-lg:tw-fixed")
+        collapseBtn.classList.add("bi-x", "max-lg:fixed")
         isHeaderCollapsed = false
 
         setTimeout(() => window.addEventListener("click", onHeaderClickOutside), 1)
@@ -32,7 +32,7 @@ function toggleHeader() {
     } else {
         collapseHeaderItems.classList.remove("opacity-100")
         collapseHeaderItems.style.width = "0vw"
-        collapseBtn.classList.remove("bi-x", "max-lg:tw-fixed")
+        collapseBtn.classList.remove("bi-x", "max-lg:fixed")
         collapseBtn.classList.add("bi-list")
         isHeaderCollapsed = true
         window.removeEventListener("click", onHeaderClickOutside)
@@ -95,14 +95,14 @@ gsap.to("#dashboard", {
 
 const faqAccordion = document.querySelectorAll('.faq-accordion')
 
-faqAccordion.forEach(function (btn) {
-    btn.addEventListener('click', function () {
+faqAccordion.forEach(function(btn) {
+    btn.addEventListener('click', function() {
         this.classList.toggle('active')
 
         // Toggle 'rotate' class to rotate the arrow
         let content = this.nextElementSibling
-        
-        // content.classList.toggle('!tw-hidden')
+
+        // content.classList.toggle('!hidden')
         if (content.style.maxHeight === '200px') {
             content.style.maxHeight = '0px'
             content.style.padding = '0px 18px'
@@ -122,14 +122,16 @@ const sections = gsap.utils.toArray("section")
 
 sections.forEach((sec) => {
 
-    const revealUptimeline = gsap.timeline({paused: true, 
-                                            scrollTrigger: {
-                                                            trigger: sec,
-                                                            start: "10% 80%", // top of trigger hits the top of viewport
-                                                            end: "20% 90%",
-                                                            // markers: true,
-                                                            // scrub: 1,
-                                                        }})
+    const revealUptimeline = gsap.timeline({
+        paused: true,
+        scrollTrigger: {
+            trigger: sec,
+            start: "10% 80%", // top of trigger hits the top of viewport
+            end: "20% 90%",
+            // markers: true,
+            // scrub: 1,
+        }
+    })
 
     revealUptimeline.to(sec.querySelectorAll(".reveal-up"), {
         opacity: 1,

@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    prefix: 'tw-',
+    // prefix: '', // ← үүнийг устгасан
     important: false,
     content: [
-        "**/*.{html, jsx, js}",
-        "**/*.js",
-        "**/*.html",
+        "./src/**/*.{html,js,jsx,ts,tsx}",
+        "./public/**/*.html",
     ],
     darkMode: 'class',
     theme: {
@@ -15,7 +14,7 @@ module.exports = {
                 secondary: "#080808",
                 outlineColor: "#1F2123"
             }
-        },
+        }
     },
     plugins: [],
-}
+};
